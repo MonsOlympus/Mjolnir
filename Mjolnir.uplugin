@@ -1,0 +1,30 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "0.18.226",
+  "FriendlyName": "Mjolnir",
+  "Description": "Mjolnir - Spline tools including formats, Extrusion, Snapping to Ground, Scatter Brushes.",
+  "Category": "Blueprints",
+  "CreatedBy": "MonsOlympus",
+  "CreatedByURL": "www.MonsOlympus.com.au",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "EnabledByDefault": true,
+  "CanContainContent": true,
+  "IsBetaVersion": true,
+  "Installed": true,
+  "Modules": [
+    {
+      "Name": "Mjolnir",
+      "Type": "Runtime",
+      "LoadingPhase": "PreDefault"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "PhysXVehicles",
+      "Enabled": true
+    }
+  ]
+}
