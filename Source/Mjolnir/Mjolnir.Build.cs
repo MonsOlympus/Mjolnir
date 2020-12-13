@@ -1,37 +1,39 @@
-namespace UnrealBuildTool.Rules
+using UnrealBuildTool;
+
+public class Mjolnir : ModuleRules
 {
-    public class Mjolnir : ModuleRules
+    public Mjolnir(ReadOnlyTargetRules Target) : base(Target)
     {
-        public Mjolnir(ReadOnlyTargetRules Target) : base(Target)
-        {
-            PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+        //PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+        PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
-            //PublicIncludePaths.AddRange(new string[] {"Mjolnir/Public/"} );
-            //PrivateIncludePaths.AddRange(new string[] {"Mjolnir/Private/"} );
-
-            DynamicallyLoadedModuleNames.AddRange(
+        DynamicallyLoadedModuleNames.AddRange(
             new string[] 
             {
                 "AssetTools",
                 "MainFrame",
-       			//"BlueTux",
+                "PropertyEditor"
             });
 
             PublicDependencyModuleNames.AddRange(
             new string[]
             {
+                "AppFramework",
                 "Engine",
                 "Core",
                 "CoreUObject",
                 "InputCore",
                 "Slate",
                 "EditorStyle",
+                //"PropertyEditor",
                 //"AIModule",
                 "BlueprintGraph",
                 "MessageLog",
                 "Json",
                 "JsonUtilities",
-                "Mjolnir"
+                "ToolMenus",
+                "UnrealEd",
+                //"Mjolnir"
                });
 
             PrivateDependencyModuleNames.AddRange(
@@ -52,8 +54,8 @@ namespace UnrealBuildTool.Rules
                     "GraphEditor",
                     "Kismet",
                     "KismetWidgets",
-                    "PropertyEditor",
-                    "Mjolnir"
+                    //"PropertyEditor",
+                    //"Mjolnir"
                 }
             );
             PrivateIncludePathModuleNames.AddRange(
@@ -63,8 +65,7 @@ namespace UnrealBuildTool.Rules
                     "UnrealEd",
                     //"Mjolnir/Private"
         //				"WorkspaceMenuStructure",
-                }
-            );
-        }
+             }
+        );
     }
 }
